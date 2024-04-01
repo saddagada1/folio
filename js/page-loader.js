@@ -1,3 +1,9 @@
+function isExternal(url) {
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  return anchor.hostname !== window.location.hostname;
+}
+
 function transition(href) {
   gsap.to(".loader-bg", {
     height: "100%",
@@ -31,7 +37,7 @@ function transition(href) {
 document.addEventListener("click", function (event) {
   if (event.target.tagName === "A") {
     const href = event.target.href;
-    if (href.includes("5500")) {
+    if (!isExternal(href)) {
       event.preventDefault();
       transition(href);
     }
@@ -42,7 +48,7 @@ document.addEventListener("touchstart", function (event) {
   const touchedElement = event.targetTouches[0].target;
   if (touchedElement.tagName === "A") {
     const href = touchedElement.href;
-    if (href.includes("5500")) {
+    if (!isExternal(href)) {
       event.preventDefault();
       transition(href);
     }
