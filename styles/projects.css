@@ -1,0 +1,154 @@
+.loader-picture {
+  background: url(../public/images/projects.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.background-container {
+  z-index: -1;
+}
+
+.orb-container {
+  top: 50%;
+  left: 20%;
+  position: absolute;
+}
+
+.main-section {
+  width: 100%;
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-left: 1px solid lightgray;
+}
+
+.grid-item {
+  height: 800px;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
+.projects-title {
+  grid-column: span 2 / span 2;
+  padding: 1.5em;
+}
+
+.title {
+  display: flex;
+  padding: 1em;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.title h1 {
+  position: relative;
+  font-size: 10vmax;
+  font-family: Cakra;
+  text-transform: lowercase;
+  line-height: 0.75;
+  text-align: center;
+}
+
+.project {
+  padding: 1.5em;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.project-bg {
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translate(0, 100%);
+}
+
+.project-media {
+  width: 100%;
+  height: 85%;
+  border-radius: 1.5em;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-info {
+  transition-duration: 0.25s;
+  margin-top: 1em;
+}
+
+.project-info h2 {
+  font-family: Cakra;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.project-info p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.project-links {
+  margin-top: 0.5em;
+  display: flex;
+  gap: 2em;
+}
+
+.project-links a {
+  font-size: 1em;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-family: IBM Plex Mono;
+  transition-duration: 0.25s;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .project:hover > .project-bg {
+    transform: translate(0, 0%);
+  }
+
+  .project:hover > .project-info {
+    color: #fff;
+  }
+
+  .project:hover .project-links a {
+    color: #fff;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .spacer {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .projects-title {
+    height: auto;
+    padding: 0em;
+  }
+
+  .projects-grid {
+    display: block;
+  }
+
+  .spacer {
+    display: none;
+  }
+}

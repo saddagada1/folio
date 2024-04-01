@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@font-face {
+  font-family: Neue Montreal;
+  src: url(../public/fonts/PPNeueMontreal-Book.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Neue Montreal;
+  src: url(../public/fonts/PPNeueMontreal-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Cakra;
+  src: url(../public/fonts/Cakra-Normal.otf);
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100dvh;
+  font-family: Neue Montreal;
+  overflow: hidden;
+}
+
+.loader-container {
+  pointer-events: none;
+}
+
+.loader-content {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 4;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pre-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  color: #fff;
+  font-family: Cakra;
+  font-weight: 500;
+  font-size: 3em;
+  text-transform: lowercase;
+  line-height: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.pre-loader p {
+  line-height: 1em;
+  transform: translateY(-100px);
+}
+
+.loader-bg {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#000000 1px, transparent 1px),
+    linear-gradient(to right, #000000 1px, transparent 1px);
+  background-size: 10px 10px;
+  z-index: 3;
+}
+
+.loader-picture {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.background-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  height: 35vmax;
+  width: 35vmax;
+}
+
+.orb:nth-child(1) {
+  background-color: #a855f7;
+}
+
+.orb:nth-child(2) {
+  background-color: #14b8a6;
+}
+
+.orb:nth-child(3) {
+  background-color: #22c55e;
+}
+
+.orb:nth-child(4) {
+  background-color: #3b82f6;
+}
+
+.orb:nth-child(5) {
+  background-color: #ef4444;
+}
+
+.orb:nth-child(6) {
+  background-color: #f97316;
+}
+
+.orb:nth-child(7) {
+  background-color: #eab308;
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(128px);
+  -webkit-backdrop-filter: blur(128px);
+}
+
+.navbar {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+}
+
+.navbar a {
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-family: IBM Plex Mono;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar > div {
+  flex: 1;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3em;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .links {
+    justify-content: space-between;
+  }
+
+  .blur {
+    backdrop-filter: blur(64px);
+    -webkit-backdrop-filter: blur(64px);
+  }
+
+  .orb {
+    height: 25vmax;
+    width: 25vmax;
+  }
+}
