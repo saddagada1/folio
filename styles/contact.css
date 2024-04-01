@@ -1,0 +1,112 @@
+.loader-picture {
+  background: url(../public/images/contact.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.background-container {
+  z-index: -1;
+}
+
+.main-section {
+  width: 100%;
+  height: 100dvh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title,
+.contact-title-sm {
+  padding: 1.5em;
+}
+
+.contact-title-sm > div:nth-child(2) {
+  margin-left: 40%;
+}
+
+.title {
+  display: flex;
+  padding: 1em;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.title h1 {
+  position: relative;
+  font-size: 10vmax;
+  font-family: Cakra;
+  text-transform: lowercase;
+  line-height: 0.75;
+  text-align: center;
+}
+
+.contact-copy {
+  flex: 1;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20%;
+}
+
+.contact-link h2 {
+  font-family: Cakra;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-size: 1.5em;
+}
+
+.contact-link p {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.contact-link a {
+  color: #000;
+  font-family: IBM Plex Mono;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1em;
+  display: block;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.contact-link a:nth-child(n + 1) {
+  margin-bottom: 0.5em;
+}
+
+.contact-link a:hover {
+  text-decoration: underline;
+}
+
+.contact-gif {
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  right: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (min-width: 1025px) {
+  .contact-title-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-title {
+    display: none;
+  }
+
+  .contact-gif {
+    width: 100%;
+    top: 5%;
+  }
+}

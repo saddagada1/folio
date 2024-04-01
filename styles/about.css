@@ -1,0 +1,207 @@
+.loader-picture {
+  background: url(../public/images/about.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.background-container {
+  z-index: -1;
+}
+
+.orb-container {
+  top: 10%;
+  right: 40%;
+  position: absolute;
+}
+
+.main-section {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.about-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-card:nth-child(1) {
+  width: 35%;
+  border-right: 1px solid lightgray;
+  padding: 1.5em;
+}
+
+.about-card:nth-child(2) {
+  width: 65%;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 1.5em;
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.about-title {
+  border-bottom: 1px solid lightgray;
+}
+
+.about-title-sm > div:nth-child(2) {
+  margin-left: 40%;
+}
+
+.title {
+  display: flex;
+  padding: 1em;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.title h1 {
+  position: relative;
+  font-size: 10vmax;
+  font-family: Cakra;
+  text-transform: lowercase;
+  line-height: 0.75;
+  text-align: center;
+}
+
+.about-copy {
+  flex: 1;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.about-description {
+  flex: 1;
+  padding: 1.5em;
+  border-right: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1em;
+}
+
+.about-izzy {
+  width: 37.5%;
+  padding: 1.5em;
+}
+
+.izzy-copy p {
+  margin-top: 1em;
+}
+
+.strong {
+  font-family: Cakra;
+  font-weight: 500;
+  text-transform: lowercase;
+  font-size: 1.5em;
+}
+
+.about-skills {
+  padding: 1.5em;
+}
+
+.about-skill-level {
+  display: flex;
+  gap: 1em;
+}
+
+.about-skill-level:nth-child(n + 1) {
+  margin-top: 1em;
+}
+
+.about-skill-level p:nth-child(1) {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.mono {
+  font-family: IBM Plex Mono;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1025px) {
+  .about-title-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .about-copy {
+    flex-direction: column;
+  }
+
+  .about-description {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .about-izzy {
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+  }
+
+  .about-izzy img {
+    aspect-ratio: 16/5;
+  }
+
+  .izzy-copy p {
+    flex: 1;
+  }
+
+  .izzy-copy p:nth-child(1) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-title {
+    display: none;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-card:nth-child(1) {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .about-card:nth-child(2) {
+    width: 100%;
+  }
+
+  .about-img {
+    border: 1px solid lightgray;
+  }
+
+  .about-copy {
+    flex-direction: column;
+  }
+
+  .about-description {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+
+  .about-izzy {
+    width: 100%;
+  }
+}
