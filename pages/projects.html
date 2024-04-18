@@ -26,7 +26,7 @@
         <p>s</p>
       </div>
     </div>
-    <div class="background-container">
+    <!-- <div class="background-container">
       <div class="orb-container">
         <div class="orb"></div>
         <div class="orb"></div>
@@ -37,7 +37,7 @@
         <div class="orb"></div>
       </div>
       <div class="blur"></div>
-    </div>
+    </div> -->
     <section class="main-section">
       <nav class="navbar">
         <div class="logo">
@@ -170,28 +170,28 @@
 
       gsap.ticker.lagSmoothing(0);
 
-      gsap.to(".orb", {
-        x: `random(${-200}, ${200}, 1)`,
-        y: `random(${-200}, ${200}, 1)`,
-        opacity: `random(0, 1, 0.1)`,
-        ease: "power4.inOut",
-        duration: 1,
-        repeat: -1,
-        repeatRefresh: true,
-      });
+      // gsap.to(".orb", {
+      //   x: `random(${-200}, ${200}, 1)`,
+      //   y: `random(${-200}, ${200}, 1)`,
+      //   opacity: `random(0, 1, 0.1)`,
+      //   ease: "power4.inOut",
+      //   duration: 1,
+      //   repeat: -1,
+      //   repeatRefresh: true,
+      // });
 
-      gsap.to(".orb-container", {
-        left: "40%",
-        top: "25%",
-        duration: 2,
-        scrollTrigger: {
-          trigger: ".projects-grid",
-          start: "top top",
-          end: "bottom bottom",
-          scrub: true,
-          scroller: ".main-section",
-        },
-      });
+      // gsap.to(".orb-container", {
+      //   left: "40%",
+      //   top: "25%",
+      //   duration: 2,
+      //   scrollTrigger: {
+      //     trigger: ".projects-grid",
+      //     start: "top top",
+      //     end: "bottom bottom",
+      //     scrub: true,
+      //     scroller: ".main-section",
+      //   },
+      // });
 
       gsap.from(".title h1", {
         y: 200,

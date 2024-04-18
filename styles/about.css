@@ -97,6 +97,12 @@
 .about-izzy {
   width: 37.5%;
   padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.izzy-img {
+  flex: 1;
 }
 
 .izzy-copy p {
@@ -119,7 +125,7 @@
   gap: 1em;
 }
 
-.about-skill-level:nth-child(n + 1) {
+.about-skill-level:nth-child(n + 2) {
   margin-top: 1em;
 }
 

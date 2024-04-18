@@ -23,7 +23,7 @@
         <p>t</p>
       </div>
     </div>
-    <div class="background-container">
+    <!-- <div class="background-container">
       <div class="orb-container">
         <div class="orb"></div>
         <div class="orb"></div>
@@ -34,7 +34,7 @@
         <div class="orb"></div>
       </div>
       <div class="blur"></div>
-    </div>
+    </div> -->
     <section class="main-section">
       <nav class="navbar">
         <div class="logo">
@@ -98,13 +98,13 @@
               <p>Hi, my name is <span class="strong">Saivamsi Addagada</span>.</p>
               <p>But you can call me Sai.</p>
               <p>
-                I'm a 26-year-old developer proficient in Java, Javascript and Python, based out of
-                Toronto, ON. My background includes over 3 years of hands-on experience building
+                I'm a 26-year-old developer, proficient in Java, Javascript and Python, based out of
+                Toronto. My background includes over 3 years of hands-on experience building
                 full-stack applications and projects. I'm well-versed in popular technologies like
-                Spring Boot, NextJS, NodeJS, MySQL, AWS, and more. My current aspirations revolve
-                around developing my skills and gaining professional experience, with the aim of
-                branching out into other domains of programming and software development. As for
-                what lies beyond that, the future remains open.
+                Spring Boot, NextJS, PostgreSQL, AWS, Kubernetes, and more. My current aspirations
+                revolve around developing my skills and gaining professional experience, with the
+                aim of branching out into other domains of programming and software development. As
+                for what lies beyond that, the future remains open.
               </p>
               <p>Currently freelancing / looking for a full time gig</p>
             </div>
@@ -123,16 +123,17 @@
             <div class="about-skill-level">
               <p>Strong:</p>
               <p class="mono">
-                Java, Spring Boot, JavaScript (ES6+), Typescript, React, NextJS, React Native,
-                Redux, NodeJS, Express, SQL(PostgreSQL, MySQL, SQLite), Redis, HTML5, CSS3,
-                Tailwind, Git, Docker
+                Java, Spring Boot, JavaScript (ES6+), Typescript, Python, React, NextJS, React
+                Native, Redux, NodeJS, SQL(PostgreSQL, MySQL), NoSQL(MongoDB), Redis, RabbitMQ,
+                HTML5, CSS3, Tailwind, Git, Docker, AWS
               </p>
             </div>
             <div class="about-skill-level">
               <p>Experienced:</p>
               <p class="mono">
-                Python, Swift, NoSQL(MongoDB), ORMs(Prisma, TypeORM), GraphQL(TypeGraphQL), tRPC,
-                Cloud Platforms(AWS, GCP, Azure), Testing Frameworks(JUnit, Jest)
+                Kubernetes, Hardware Emulation, Server Configuration (Apache, Nginx), Websockets,
+                ORMs(Prisma, TypeORM), GraphQL, tRPC, Testing Frameworks(JUnit, Jest), Compatibility
+                Testing
               </p>
             </div>
           </div>
@@ -163,15 +164,15 @@
 
       gsap.ticker.lagSmoothing(0);
 
-      gsap.to(".orb", {
-        x: `random(${-200}, ${200}, 1)`,
-        y: `random(${-200}, ${200}, 1)`,
-        opacity: `random(0, 1, 0.1)`,
-        ease: "power4.inOut",
-        duration: 1,
-        repeat: -1,
-        repeatRefresh: true,
-      });
+      // gsap.to(".orb", {
+      //   x: `random(${-200}, ${200}, 1)`,
+      //   y: `random(${-200}, ${200}, 1)`,
+      //   opacity: `random(0, 1, 0.1)`,
+      //   ease: "power4.inOut",
+      //   duration: 1,
+      //   repeat: -1,
+      //   repeatRefresh: true,
+      // });
 
       gsap.from(".title h1", {
         y: 200,
